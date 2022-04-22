@@ -1,0 +1,32 @@
+version: "3.3"
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: docker/Nginx.Dockerfile
+    ports:
+      - 8074:80
+    links:
+      - fpm
+    volumes:
+      - ./:/var/www/only
+  fpm:
+    build:
+      context: .
+      dockerfile: docker/Fpm.Dockerfile
+    volumes:
+      - ./:/var/www/only
+      - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+    links:
+      - postresql
+  postgresql:
+    build:
+      context: .
+      dockerfile: docker/Postgres.Dockerfile
+    ports:
+      - 54323:5432
+    environment:
+      POSTGRES_DB: "only"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "root"
