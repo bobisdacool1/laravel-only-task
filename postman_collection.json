@@ -1,0 +1,108 @@
+{
+    "info": {
+        "_postman_id": "3f1d0fa9-3513-4d3b-be13-720205201e53",
+        "name": "Only-task",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get user data",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "localhost:8074/api/user/2",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8074",
+                    "path": [
+                        "api",
+                        "user",
+                        "2"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get news list",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "localhost:8074/api/news?count=5&page=2",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8074",
+                    "path": [
+                        "api",
+                        "news"
+                    ],
+                    "query": [
+                        {
+                            "key": "count",
+                            "value": "5"
+                        },
+                        {
+                            "key": "page",
+                            "value": "2"
+                        },
+                        {
+                            "key": "role",
+                            "value": "khmz-hrgx-xdga",
+                            "disabled": true
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get one news",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "localhost:8074/api/news/1",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8074",
+                    "path": [
+                        "api",
+                        "news",
+                        "1"
+                    ],
+                    "query": [
+                        {
+                            "key": "role",
+                            "value": "wple-nsda-volo",
+                            "disabled": true
+                        }
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
