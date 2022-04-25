@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Builder;
 
 class NewsController extends Controller
 {
+    // maybe i should use middleware instead of the one below, i would ask about it
     public function index(NewsIndexRequest $request)
     {
         $validated = $request->validated();
